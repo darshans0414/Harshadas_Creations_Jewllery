@@ -1,0 +1,67 @@
+.form-container {
+    max-width: 650px; /* मोठं केलं */
+    margin: 100px auto;
+    background: #ffffff;
+    padding: 50px 60px; /* padding वाढवलं */
+    border-radius: 20px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+.form-container .logo {
+    width: 130px; /* logo मोठा */
+    height: 130px;
+    object-fit: contain;
+    margin-bottom: 25px;
+}
+
+.form-container .brand-name {
+    font-size: 32px; /* font size वाढवलं */
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+.success-message {
+    font-size: 28px; /* success message मोठा */
+    color: #28a745;
+    margin-bottom: 20px;
+}
+
+.form-container p {
+    font-size: 20px; /* paragraph text मोठं */
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.form-container a button {
+    padding: 14px 30px;
+    font-size: 20px; /* बटनचा text मोठा */
+    background-color: #ff7f50;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-container a button:hover {
+    background-color: #ff5722;
+}
+/* 🔥 Mobile Responsive adjustments */
+@media (max-width: 768px) {
+    header {
+        font-size: 24px;
+        padding: 15px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .form-section input, 
+    .form-section button {
+        font-size: 14px;
+        padding: 10px;
+    }
+}

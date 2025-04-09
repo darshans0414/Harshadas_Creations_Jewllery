@@ -1,0 +1,102 @@
+.form-container {
+    max-width: 600px; /* size vadhavla */
+    margin: 50px auto;
+    background: #ffffff;
+    padding: 40px; /* padding vadhavla */
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.logo {
+    width: 120px; /* logo size vadhavla */
+    height: 120px;
+    object-fit: contain;
+    margin-bottom: 25px;
+    border-radius: 50%;
+    border: 2px solid #ff7f50;
+    padding: 8px;
+    background: #fff7f0;
+}
+
+.brand-name {
+    font-size: 28px; /* heading font size vadhavla */
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.form-container h2 {
+    font-size: 24px; /* h2 size vadhavla */
+    color: #ff5722;
+    margin-bottom: 12px;
+}
+
+.form-container p {
+    font-size: 16px; /* paragraph size vadhavla */
+    color: #666;
+    margin-bottom: 25px;
+    padding: 0 15px;
+}
+.form-container p b {
+    font-size: 25px; /* Note चा फक्त size वाढवला */
+    color: #ff5722; /* थोडा attractive रंग दिला */
+    font-weight: bold; /* Bold केलं */
+}
+
+
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* gap vadhavla */
+}
+
+.form-container input,
+.form-container textarea {
+    width: 100%;
+    padding: 15px; /* input padding vadhavla */
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 18px; /* font size vadhavla */
+    background: #f9f9f9;
+    transition: 0.3s;
+}
+
+.form-container input:focus,
+.form-container textarea:focus {
+    border-color: #ff7f50;
+    background: #fff;
+    outline: none;
+}
+
+.form-container button {
+    padding: 15px;
+    background-color: #ff7f50;
+    color: white;
+    font-size: 20px; /* button font size vadhavla */
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-container button:hover {
+    background-color: #ff5722;
+}
+/* 🔥 Mobile Responsive adjustments */
+@media (max-width: 768px) {
+    header {
+        font-size: 24px;
+        padding: 15px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .form-section input, 
+    .form-section button {
+        font-size: 14px;
+        padding: 10px;
+    }
+}

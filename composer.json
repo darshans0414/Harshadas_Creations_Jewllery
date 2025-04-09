@@ -1,0 +1,7 @@
+{
+    "require": {
+        "razorpay/razorpay": "*",
+        "twilio/sdk": "^8.4",
+        "phpmailer/phpmailer": "^6.9"
+    }
+}

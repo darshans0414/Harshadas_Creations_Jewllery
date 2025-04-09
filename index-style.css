@@ -1,0 +1,771 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: poppins;
+}
+a{
+    text-decoration: none;
+
+}
+ul{
+    list-style: none;
+
+}
+:root{
+    --main-color: #cab273;
+    --main-light-color: #fffbf0;
+    --secoundary-color: #551756;
+    
+}
+/*==header===*/
+header{
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 1000;
+}
+
+.header-top-bar{
+    border-bottom: 1px solid #f5f5f5;
+    padding: 10px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header-top-bar{
+    color: #474747;
+    font-size: 0.8rem;
+    letter-spacing: 0.3px;
+    font-weight: 400;
+    font-size: 22px;
+}
+/*==navigation*/
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 20px; /* कमी केलं! */
+    width: 100%;
+    
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+}
+
+.brand-name {
+    font-size: 25px;
+    color: #3b3b3b;
+    font-weight: 600;
+}
+
+
+.menu {
+    display: flex;
+    gap: 20px;
+}
+.menu li a {
+    padding: 3px 10px;
+    color: #3b3b3b;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    font-size: 20px;
+}
+.menu li a:hover {
+    color: var(--main-color);
+}
+.header-fix {
+    position: fixed;
+    box-shadow: 2px 2px 40px rgba(0, 0, 0, 0.05);
+    animation: animationnav 0.6s;
+}
+@keyframes annimationnav{
+    0%{
+        top: -100%;
+    }
+    100%{
+        top: 0%;
+    }
+}
+ .header-top-bar {
+    font-size: 18px;
+}
+.header-fix .navigation{
+    padding: 12px 0px;
+}
+#main-banner {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(to right, #f5f5f5 52.2%, transparent 55%);
+}
+
+
+.main-banner-box {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex; /* ✅ flex वापरलं image आणि text साठी */
+    align-items: center;
+    justify-content: flex-start; /* ✅ left side ला text */
+    padding-left: 50px; /* ✅ थोडं अंदरून */
+}
+
+
+.main-banner-box img {
+    width: 100%;
+    height: 100vh; /* full screen height */
+    object-fit: contain; /* image पूर्ण दिसेल */
+    object-position: right; /* 👈 right side ला move केली */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+
+
+.main-banner-text {
+    background-color: rgba(255, 223, 186, 0.7); /* हलकं सोनेरी color */
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 600px;
+    backdrop-filter: blur(5px);
+    position: relative; /* 👈 जरूरी आहे */
+    z-index: 1; /* 👈 image पेक्षा वर आणण्यासाठी */
+}
+
+.main-banner-text h1 {
+    color: #5c4033;
+    font-size: 30px;
+    margin-bottom: 10px;
+    white-space: nowrap; /* एकाच ओळीत ठेवण्यासाठी */
+    overflow: hidden; /* गरज असल्यास overflow लपवतो */
+    text-overflow: ellipsis; /* गरज असल्यास शेवटी ... दाखवतो */
+    }
+    
+
+
+.main-banner-text p {
+    color: #6b4c3b;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.main-banner-text a {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #c19a6b;
+    color: white;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.main-banner-text a:hover {
+    background-color: #a47c48;
+}
+
+.what-we-provide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    
+}
+
+.w-info-box {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 320px; /* ✅ width वाढवली आणि दोघांची same */
+    min-height: 250px; /* ✅ height fix केली समान दिसायला */
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.w-info-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.w-info-icon {
+    font-size: 50px; /* थोडा मोठा icon */
+    color: var(--main-color);
+    margin-bottom: 20px;
+}
+
+.w-info-text strong {
+    display: block;
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.w-info-text p {
+    font-size: 1rem;
+    color: #777;
+    line-height: 1.6;
+}
+.products {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: center; /* ✅ heading center ला */
+}
+
+.products h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+/* Swiper container and slides */
+.swiper {
+    width: 100%;
+    padding: 30px 0;
+}
+
+.swiper-slide {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: center;
+    padding: 20px;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 300px; /* ✅ Height थोडी वाढवली */
+    object-fit: contain; /* ✅ Image कट नाही होणार */
+    background-color: #fef4e8; /* ✅ हलकासा attractive color दिला */
+    padding: 20px; /* ✅ Image च्या आजूबाजूला space */
+    border-radius: 25px; /* ✅ गोलसरपणा वाढवला */
+    margin-bottom: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* ✅ थोडं shadow effect attractive दिसायला */
+}
+
+
+.product-title {
+    font-size: 25px;
+    margin: 10px 0 5px;
+    color: #333;
+}
+
+.product-price {
+    font-size: 20px;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.add-to-cart {
+    background-color: var(--main-color);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.add-to-cart:hover {
+    background-color: #a89050;
+}
+.right-nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px; /* दुव्यांमध्ये थोडं अंतर */
+    padding: 10px 20px;
+}
+
+.nav-search i {
+    font-size: 24px; /* ✅ icon मोठा केलाय */
+    color: #333; /* icon चा रंग (इच्छेनुसार बदलू शकतो) */
+    cursor: pointer; /* hover केल्यावर हात दाखवायला */
+    transition: 0.3s ease; /* हलकं animation */
+}
+
+.nav-search i:hover {
+    color: #000; /* hover वर गडद रंग */
+}
+footer {
+    background-color: #333; /* Footer background color */
+    color: #fff;
+    padding: 20px 0;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between; /* Align logo-name and social icons with space in between */
+    align-items: center;
+    flex-direction: column; /* Stack elements vertically */
+}
+
+.footer-logo-name {
+    display: flex;
+    align-items: center;
+}
+
+.footer-logo-name .logo img {
+    max-width: 50px;
+    margin-right: 10px;
+}
+
+.footer-logo-name p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+}
+
+footer p {
+    font-size: 14px;
+    color: #fff;
+    margin-top: 10px; /* Add space between name and copyright text */
+}
+
+.footer-social {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.footer-social a {
+    color: #fff;
+    margin-left: 15px;
+    font-size: 25px;
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+
+.footer-social a:hover {
+    color: #ff6347;
+}
+.menu-btn,
+.menu-icon{
+    display: none;
+}
+@media(max-width:1100px){
+    .footer-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 40px;
+    }
+}
+
+@media(max-width:468px){
+    .footer-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 40px;
+    }
+    .footer-logo-name p{
+        font-size: 12px;
+    }
+    .brand-name {
+        font-size: 14px;
+        color: #3b3b3b;
+        font-weight: 600;
+    }
+}
+
+
+@media(max-width: 768px){
+    .footer-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 40px;
+    }
+    .brand-name {
+        font-size: 14px;
+        color: #3b3b3b;
+        font-weight: 600;
+    }
+}
+@media(max-width:1000px){
+    .navigation{
+        justify-content: space-between;
+        height: 65px;
+        padding: 35px 15px;
+        position: relative;
+    }
+    .brand-name {
+        font-size: 14px;
+        color: #3b3b3b;
+        font-weight: 600;
+    }
+    .header-fix .navigation{
+        padding: 35px 15px;
+    }
+    .navigation .menu{
+        position: absolute;
+        top: 100%;
+        display: none;
+        z-index: 100;
+        padding: 0px;
+        margin: 0px;
+        border-bottom: 1px solid #f5f5f5;
+        background-color: #ffffff;
+        width: 100%;
+    }
+    .navigation .menu li{
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+    }
+    .navigation .menu li a{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 30px 20px;
+        margin: 0px;
+        height: 50px;
+        border-top: 1px solid #f5f5f5;
+    }
+    .menu-icon{
+        display: block;
+    }
+    .navigation .menu-icon{
+        cursor: pointer;
+        float: right;
+        padding: 5px;
+        user-select: none;
+        z-index: 2;
+        position: relative;
+    }
+    .navigation .menu-icon .nav-icon{
+        background-color: #141414cc;
+        display: block;
+        height: 2px;
+        width: 25px;
+        position: relative;
+        transition: background 0.2s ease-out;
+    }
+    .navigation .menu-icon .nav-icon::before,
+    .navigation .menu-icon .nav-icon::after{
+        background-color: #141414cc;
+        content: '';
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%; 
+        transition: all ease-out 0.2s;  
+}
+.navigation .menu-icon .nav-icon::before{
+    top: 7px;
+}
+.navigation .menu-icon .nav-icon::after{
+    top: -7px;
+}
+.navigation .menu-btn:checked ~ .menu-icon .nav-icon::before{
+    transform: rotate(-45deg);
+    top: 0px;
+}
+.navigation .menu-btn:checked ~ .menu-icon .nav-icon::after{
+    transform: rotate(45deg);
+    top: 0px;
+}
+.navigation .menu-btn:checked ~ .menu-icon{
+    background-color: transparent;
+
+}
+.navigation .menu-btn:checked ~ .menu{
+    display: block;
+}
+.menu-btn{
+    display: none;
+}
+.product-grid-half{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 200px;
+    max-height: 100%;
+}
+.product-grid-half .product-grid-box2{
+    grid-column: 1/3;
+    grid-row: 1/2;
+    height: 300px;
+}
+
+}
+@media(max-width:800px){
+    .main-banner-text{
+        position: static;
+        transform: translate(0,0);
+        padding: 50px 20px;
+    }
+    .main-banner-box img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh; /* Full viewport height */
+        object-fit: cover; /* Image la crop na karta perfect fit */
+        z-index: -1; /* Back la thevla jenne karun text var disel */
+    }
+    
+    .product-grid-half .product-grid-box .product-grid-text{
+        max-width: 220px;
+    }
+    .product-grid-half .product-grid-box2{
+        grid-column: 1/2;
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-banner-box {
+      position: relative;
+      padding-top: 250px; /* Banner image varun text khup khali yeu naye */
+    }
+  
+    .main-banner-text {
+      position: absolute;
+      padding: 12px 16px;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0px 2px 8px rgba(0,0,0,0.05);
+      margin: 0 20px;
+      top: 50%;
+      transform: translate(-50);
+      width: 50%;
+      left: -2%;
+    }
+  
+    .main-banner-text h1 {
+      font-size: 12px;
+      margin-bottom: 6px;
+      color: #5c4033;
+    }
+  
+    .main-banner-text p {
+      font-size: 14px;
+      margin-bottom: 8px;
+      color: #6b4c3b;
+    }
+  
+    .main-banner-text a {
+      font-size: 13px;
+      padding: 8px 16px;
+      background-color: #c19a6b;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+  }
+  
+@media (max-width: 768px) {
+
+    /* what-we-provide section - center layout and same size boxes */
+    .what-we-provide {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 15px;
+      padding: 20px;
+      justify-items: center;
+    }
+  
+    .w-info-box {
+      width: 90%;
+      padding: 15px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      background-color: #fff;
+    }
+  
+    .w-info-icon i {
+      font-size: 24px;
+    }
+  
+    .w-info-text strong {
+      font-size: 16px;
+    }
+  
+    .w-info-text p {
+      font-size: 14px;
+      margin: 0;
+    }
+  
+    /* Products (swiper) section */
+    .products h2 {
+      font-size: 20px;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+  
+    .mySwiper {
+      width: 100%;
+      padding: 10px 0;
+    }
+  
+    .swiper-wrapper {
+      display: flex;
+      gap: 12px;
+      padding: 0 10px;
+    }
+  
+    .swiper-slide {
+      width: 160px;
+      min-height: 260px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      box-sizing: border-box;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      background-color: #fff;
+      text-align: center;
+    }
+  
+    .swiper-slide img {
+      width: 100%;
+      height: 130px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 8px;
+    }
+  
+    .product-title {
+      font-size: 14px;
+      font-weight: 600;
+      height: 34px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin: 4px 0;
+      line-height: 1.2;
+    }
+  
+    .product-price {
+      font-size: 13px;
+      color: #444;
+      margin: 4px 0;
+    }
+  }
+  @media (max-width: 468px) {
+    .main-banner-box {
+      position: relative;
+      padding-top: 250px; /* Banner image varun text khup khali yeu naye */
+    }
+  
+    .main-banner-text {
+      position: absolute;
+      padding: 12px 16px;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0px 2px 8px rgba(0,0,0,0.05);
+      margin: 0 20px;
+      top: 50%;
+      transform: translate(-50);
+      width: 50%;
+      left: -2%;
+    }
+  
+    .main-banner-text h1 {
+      font-size: 12px;
+      margin-bottom: 6px;
+      color: #5c4033;
+    }
+  
+    .main-banner-text p {
+      font-size: 14px;
+      margin-bottom: 8px;
+      color: #6b4c3b;
+    }
+  
+    .main-banner-text a {
+      font-size: 13px;
+      padding: 8px 16px;
+      background-color: #c19a6b;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+  }
+  @media (max-width: 555px) {
+    .header-top-bar {
+        font-size: 16px;
+        padding: 6px 12px;
+      }
+      .brand-name {
+        font-size: 12px;
+        margin-top: 6px;
+        font-weight: 1000;
+      }
+    .main-banner-box {
+      padding-top: 100px;
+    }
+  
+    .main-banner-text h1 {
+      font-size: 10px;
+      font-weight: 1000;
+    }
+  
+    .main-banner-text p {
+      font-size: 16px;
+    }
+  
+    .main-banner-text a {
+      padding: 10px 20px;
+      font-size: 14px;
+    }
+  }
+  
+  /* -------- Responsive for 400px and below -------- */
+  @media (max-width: 400px) {
+    .header-top-bar {
+        font-size: 14px;
+      }
+      .brand-name {
+        font-size: 8px;
+        margin-top: 6px;
+        font-weight: 1000;
+      }
+    
+    .main-banner-text h1 {
+      font-size: 8px;
+      font-weight: 1000;
+    }
+  
+    .main-banner-text p {
+      font-size: 14px;
+    }
+  
+    .main-banner-text a {
+      padding: 8px 18px;
+      font-size: 13px;
+    }
+  }
+
+  
