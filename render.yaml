@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: handmade-jewellery
+    env: docker
+    plan: free
+    region: oregon
+    dockerfilePath: ./Dockerfile
+    buildCommand: ""
+    startCommand: ""
